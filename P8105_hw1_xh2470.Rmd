@@ -1,0 +1,7 @@
+---
+title: "P8105_hw1_xh2470"
+author: "Xueqing Huang UNI:xh2470"
+output: github_document
+---
+
+
