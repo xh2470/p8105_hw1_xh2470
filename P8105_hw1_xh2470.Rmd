@@ -35,3 +35,29 @@ as.numeric(pull(df, vec_factor))
 # We can calculate the mean of only numeric and logical variables.
 
 ```
+
+# Problem 2
+```{r load dataset}
+data("penguins", package = "palmerpenguins")
+```
+
+The name of the dataset is **penguins**, and it contains **`r nrow(penguins)`** rows and **`r ncol(penguins)`** columns.
+Variables of this dataset include _`r names(penguins)`_.
+
+**Value of the variables**
+
+```{r}
+summary(penguins)
+```
+
+**Mean of flipper length**
+
+`r mean(pull(penguins, flipper_length_mm), na.rm = TRUE)`
+
+```{r scatterplot}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm)) + geom_point(aes(colour = species))
+
+ggsave("scatter_plot.pdf", height = 4, width = 6)
+
+```
+
